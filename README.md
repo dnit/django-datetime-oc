@@ -13,12 +13,13 @@ Django 1.7.7 v/s Django 1.11.14
     virtualenv env2
     cd old_django_project
   
-## CREATE mysql database name test_db which can be accessed by root user without password
-
+## CREATE mysql database name test_db which can be accessed by root user without password 
+    
 
 ## Install environment1 (i.e Django 1.7.7)
     source ../env1/bin/activate
     pip install -r requirements1.txt
+    python manage.py migrate
     python manage.py shell
     >>> Dummy.objects.create()
     >>> Dummy.objects.create()
